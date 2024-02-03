@@ -33,9 +33,9 @@ const colorVariants = {
 
 export default function About() {
   return (
-    <div className="bg-gray-300 min-h-96 flex justify-center items-center">
+    <div className="bg-gray-200 min-h-96 flex justify-center items-center text-center md:text-left">
       {/* Left Panel */}
-      <div className="container flex justify-between items-center gap-8 py-10">
+      <div className="container flex flex-col md:flex-row justify-between items-center gap-8 py-10">
         <div className="flex-1 space-y-4">
           <h2 className="text-3xl text-secondary font-bold">
             About Our Madrasah
@@ -53,7 +53,7 @@ export default function About() {
         </div>
 
         {/* Right Panel */}
-        <div className="flex-1 bg-white p-8 space-y-3">
+        <div className="flex-1 w-full bg-white p-8 space-y-3">
           <h2 className="text-secondary font-semibold text-2xl">
             Notice Board
           </h2>
@@ -67,7 +67,9 @@ export default function About() {
                   >
                     {formatDate(date)}
                   </div>
-                  <p className="bg-gray-100 px-2 py-1 flex-1">{title}</p>
+                  <p className="bg-gray-100 px-2 py-1 flex-1 text-left">
+                    {title}
+                  </p>
                 </Link>
               ))}
           </div>
