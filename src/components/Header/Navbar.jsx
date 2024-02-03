@@ -43,7 +43,7 @@ const rightMenu = [
 export default function Navbar() {
   return (
     <div className="w-full h-nav bg-white text-black sticky top-0">
-      <nav className="container mx-auto px-4 h-full flex justify-between items-center">
+      <nav className="container h-full flex justify-between items-center">
         <div className="gap-6 items-center flex-1 hidden lg:flex">
           {leftMenu.map(({ text, href }) => (
             <Navlink href={href} text={text} key={href} />
