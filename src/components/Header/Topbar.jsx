@@ -1,4 +1,4 @@
-import Link from "next/link";
+import LinkButton from "../shared/buttons/LinkButton";
 import Clock from "./Clock";
 
 const mobile = "01712345678";
@@ -12,12 +12,9 @@ export default function TopBar() {
         <Clock />
 
         <div className="flex justify-end">
-          <Link
-            href="/dashboard"
-            className="border-2 border-white px-4 py-2 hover:bg-black hover:border-black font-semibold"
-          >
+          <LinkButton href="/dashboard" className="border-2 border-white">
             Dashboard
-          </Link>
+          </LinkButton>
         </div>
       </div>
     </div>
