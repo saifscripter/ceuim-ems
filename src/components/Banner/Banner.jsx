@@ -69,7 +69,7 @@ export default function Banner() {
               style={{ objectFit: "cover" }}
             />
             <div className="absolute inset-0 bg-black opacity-40"></div>
-            <div className="absolute inset-0 text-white flex flex-col justify-center items-center p-4">
+            <div className="container absolute inset-0 text-white flex flex-col justify-center items-center">
               <h1 className="text-4xl font-bold max-w-lg text-center mb-3">
                 {title}
               </h1>
