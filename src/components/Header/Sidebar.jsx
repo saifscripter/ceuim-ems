@@ -1,10 +1,11 @@
 "use client";
 
+import { leftMenu, rightMenu } from "@/data/menu";
 import { useState } from "react";
 import { VscChromeClose, VscThreeBars } from "react-icons/vsc";
 import Navlink from "./Navlink";
 
-export default function Sidebar({ leftMenu, rightMenu }) {
+export default function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -23,7 +24,7 @@ export default function Sidebar({ leftMenu, rightMenu }) {
       )}
 
       <div
-        className={`lg:hidden bg-black text-white flex flex-col gap-6 absolute top-0 left-0 z-50 h-screen w-72 p-5  transition-transform duration-100 ease-out ${
+        className={`bg-black text-white flex flex-col gap-6 absolute top-0 left-0 h-screen w-72 p-5  transition-transform duration-100 ease-out ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

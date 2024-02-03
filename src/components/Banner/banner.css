@@ -10,7 +10,3 @@
 .swiper-pagination-bullet-active {
   filter: none;
 }
-
-.swiper {
-  z-index: -1;
-}
