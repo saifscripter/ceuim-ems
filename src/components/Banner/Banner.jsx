@@ -54,6 +54,7 @@ export default function Banner() {
           return '<span class="' + className + '"></span>';
         },
       }}
+      loop={true}
       autoplay={{
         delay: 2500,
         disableOnInteraction: true,
