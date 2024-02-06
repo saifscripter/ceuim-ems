@@ -13,8 +13,8 @@ export default function Sidebar() {
   };
 
   useEffect(() => {
-    const hideSidebar = (event) => {
-      if (event.target.id !== "sidebar") {
+    const hideSidebar = ({ target }) => {
+      if (target.id !== "sidebar") {
         setIsSidebarOpen(false);
       }
     };

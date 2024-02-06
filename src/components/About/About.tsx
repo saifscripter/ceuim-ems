@@ -59,7 +59,11 @@ export default function About() {
           </h2>
           <div className="space-y-1">
             {notices
-              .sort((a, b) => new Date(b.date) - new Date(a.date))
+              .sort(
+                (a, b) =>
+                  new Date(b.date).getMilliseconds() -
+                  new Date(a.date).getMilliseconds()
+              )
               .map(({ id, date, title, href }, index) => (
                 <Link href={href} key={id} className="flex hover:brightness-90">
                   <div

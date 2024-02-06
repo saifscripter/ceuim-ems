@@ -6,6 +6,10 @@ export default function LinkButton({
   className,
   children,
   ...restProps
+}: {
+  href: string;
+  className?: string;
+  children: JSX.Element | string;
 }) {
   return (
     <Link
@@ -14,7 +18,7 @@ export default function LinkButton({
         "px-4 py-2 bg-primary text-white hover:bg-black hover:border-black font-semibold inline-block",
         className
       )}
-      restProps
+      {...restProps}
     >
       {children}
     </Link>

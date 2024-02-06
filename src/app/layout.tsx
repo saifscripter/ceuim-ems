@@ -9,7 +9,7 @@ export const metadata = {
   description: "Chikanchara Emdadul Ulum Islamia Madrasah",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: JSX.Element }) {
   return (
     <html lang="en">
       <body className={`${inter.className} min-h-screen`}>

@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 export default function Clock() {
   const [date, setDate] = useState(new Date());
 
-  let hours = date.getHours();
-  const AMPM = hours > 12 ? "PM" : "AM";
+  let _hours = date.getHours();
+  _hours = _hours > 12 ? _hours - 12 : _hours;
 
-  hours = hours > 12 ? hours - 12 : hours;
-  hours = hours.toString().padStart(2, "0");
-
+  const hours = _hours.toString().padStart(2, "0");
   const minutes = date.getMinutes().toString().padStart(2, "0");
   const seconds = date.getSeconds().toString().padStart(2, "0");
+
+  const AMPM = date.getHours() > 12 ? "PM" : "AM";
 
   useEffect(() => {
     const timeId = setInterval(() => {
